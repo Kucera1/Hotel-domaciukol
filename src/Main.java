@@ -33,6 +33,7 @@ public class Main {
         System.out.println("Pokoj číslo:" + room1.getNoOfRoom() + "," + " " + room1.getNoOfBeds() + " " + room1.getBalcony() + " " + room1.getSeaViews() + " " + room1.getPriceForNight() + "kč/noc");
         System.out.println(booking1.getFrom() + " - " + booking1.getTo() );
         System.out.println();
+        System.out.println("Seznam rezervací:");
 
         List<ListOfBookings> bookingsList = new ArrayList<>();
         bookingsList.add(listOfBookings);
