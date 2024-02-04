@@ -1,7 +1,4 @@
-import com.engeto.ja.du.Booking;
-import com.engeto.ja.du.Guest;
-import com.engeto.ja.du.ListOfBookings;
-import com.engeto.ja.du.Room;
+import com.engeto.ja.du.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -21,15 +18,18 @@ public class Main {
         Booking booking = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7,26));
         Booking booking1 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14));
 
+        TypeOfVacation typeOfVacation = new TypeOfVacation("Rekreační pobyt.");
+        TypeOfVacation typeOfVacation1 = new TypeOfVacation("Pracovní pobyt.");
 
-        ListOfBookings listOfBookings = new ListOfBookings("Adéla Malíková", 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26));
+
+        ListOfBookings listOfBookings = new ListOfBookings("Adéla Malíková", 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26) );
         ListOfBookings listOfBookings1 = new ListOfBookings("Adéla Malíková a Jan Dvořáček", 3, LocalDate.of(2021,9, 1), LocalDate.of(2021, 9, 14));
 
-        System.out.println(guest.getNameAndSurname() + " " + guest.getBirthDate());
+        System.out.println(guest.getNameAndSurname() + " " + guest.getBirthDate() + ": " + typeOfVacation1.getTypeOfVacation());
         System.out.println("Pokoj číslo:" + room.getNoOfRoom() + ","  + " " + room.getNoOfBeds() + " " + room.getBalcony() + " " + room.getSeaViews() + " " + room.getPriceForNight() + "kč/noc");
         System.out.println(booking.getFrom() + " - " + booking.getTo());
         System.out.println();
-        System.out.println(guest.getNameAndSurname() + " a " + guest1.getNameAndSurname());
+        System.out.println(guest.getNameAndSurname() + " a " + guest1.getNameAndSurname() + ": " + typeOfVacation.getTypeOfVacation());
         System.out.println("Pokoj číslo:" + room1.getNoOfRoom() + "," + " " + room1.getNoOfBeds() + " " + room1.getBalcony() + " " + room1.getSeaViews() + " " + room1.getPriceForNight() + "kč/noc");
         System.out.println(booking1.getFrom() + " - " + booking1.getTo() );
         System.out.println();
