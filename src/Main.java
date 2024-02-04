@@ -13,7 +13,7 @@ public class Main {
 
         Guest guest = new Guest("Adéla Malíková", LocalDate.of(1993, 1, 13));
 
-        Guest guest1 = new Guest("Jan Dvořáček", LocalDate.of(1995, 05, 5));
+        Guest guest1 = new Guest("Jan Dvořáček", LocalDate.of(1995, 5, 5));
 
         Room room = new Room(1, "jednolůžkový pokoj,", "s balkónem,", "s výhledem na moře,", 1000);
         Room room1 = new Room(3, "trojlůžkový pokoj,", "bez balkónu,", "s výhledem na moře,", 2400);
