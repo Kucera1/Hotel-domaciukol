@@ -1,20 +1,30 @@
 package com.engeto.ja.du;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListOfBookings {
-    private List<Bookingtime> bookingtimes = new ArrayList<>();
+    private List<Booking> bookingList = new ArrayList<>();
     private String nameAndSurname;
-    private String noOfRoom;
-    private String booking;
+    private int noOfRoom;
+    private LocalDate bookingFrom;
+    private LocalDate bookingTo;
 
-    public List<Bookingtime> getBookingtimes() {
-        return bookingtimes;
+    public ListOfBookings(String nameAndSurname, int noOfRoom, LocalDate bookingFrom, LocalDate bookingTo) {
+        this.bookingList = bookingList;
+        this.nameAndSurname = nameAndSurname;
+        this.noOfRoom = noOfRoom;
+        this.bookingFrom = bookingFrom;
+        this.bookingTo = bookingTo;
     }
 
-    public void setBookingtimes(List<Bookingtime> bookingtimes) {
-        this.bookingtimes = bookingtimes;
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
+
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
     }
 
     public String getNameAndSurname() {
@@ -25,19 +35,27 @@ public class ListOfBookings {
         this.nameAndSurname = nameAndSurname;
     }
 
-    public String getNoOfRoom() {
+    public int getNoOfRoom() {
         return noOfRoom;
     }
 
-    public void setNoOfRoom(String noOfRoom) {
+    public void setNoOfRoom(int noOfRoom) {
         this.noOfRoom = noOfRoom;
     }
 
-    public String getBooking() {
-        return booking;
+    public LocalDate getBookingFrom() {
+        return bookingFrom;
     }
 
-    public void setBooking(String booking) {
-        this.booking = booking;
+    public void setBookingFrom(LocalDate bookingFrom) {
+        this.bookingFrom = bookingFrom;
+    }
+
+    public LocalDate getBookingTo() {
+        return bookingTo;
+    }
+
+    public void setBookingTo(LocalDate bookingTo) {
+        this.bookingTo = bookingTo;
     }
 }

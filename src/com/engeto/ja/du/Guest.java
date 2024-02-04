@@ -1,8 +1,17 @@
 package com.engeto.ja.du;
 
+import java.time.LocalDate;
+
 public class Guest {
     private String nameAndSurname;
-    private String datumNarozeni;
+    private LocalDate birthDate;
+
+    public Guest(String nameAndSurname, LocalDate birthDate) {
+        this.nameAndSurname = nameAndSurname;
+        this.birthDate = birthDate;
+    }
+
+
 
     public String getNameAndSurname() {
         return nameAndSurname;
@@ -12,11 +21,11 @@ public class Guest {
         this.nameAndSurname = nameAndSurname;
     }
 
-    public String getDatumNarozeni() {
-        return datumNarozeni;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setDatumNarozeni(String datumNarozeni) {
-        this.datumNarozeni = datumNarozeni;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }

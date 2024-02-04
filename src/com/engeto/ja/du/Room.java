@@ -1,17 +1,30 @@
 package com.engeto.ja.du;
 
+import java.math.BigDecimal;
+
 public class Room {
-    private String noOfRoom;
+    private int noOfRoom;
     private String noOfBeds;
     private String balcony;
     private String seaViews;
-    private String priceForNight;
+    private int priceForNight;
 
-    public String getNoOfRoom() {
+    public Room(int noOfRoom, String noOfBeds, String balcony, String seaViews, int priceForNight) {
+        this.noOfRoom = noOfRoom;
+        this.noOfBeds = noOfBeds;
+        this.balcony = balcony;
+        this.seaViews = seaViews;
+        this.priceForNight = priceForNight;
+    }
+
+
+
+
+    public int getNoOfRoom() {
         return noOfRoom;
     }
 
-    public void setNoOfRoom(String noOfRoom) {
+    public void setNoOfRoom(int noOfRoom) {
         this.noOfRoom = noOfRoom;
     }
 
@@ -39,11 +52,17 @@ public class Room {
         this.seaViews = seaViews;
     }
 
-    public String getPriceForNight() {
+    public int getPriceForNight() {
         return priceForNight;
     }
 
-    public void setPriceForNight(String priceForNight) {
+    public void setPriceForNight(int priceForNight) {
         this.priceForNight = priceForNight;
     }
-}
+
+
+
+
+    }
+
+

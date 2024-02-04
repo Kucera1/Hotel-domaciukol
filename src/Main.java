@@ -1,4 +1,4 @@
-import com.engeto.ja.du.Bookingtime;
+import com.engeto.ja.du.Booking;
 import com.engeto.ja.du.Guest;
 import com.engeto.ja.du.ListOfBookings;
 import com.engeto.ja.du.Room;
@@ -11,67 +11,39 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Guest guest = new Guest();
-        Guest guest1 = new Guest();
+        Guest guest = new Guest("Adéla Malíková", LocalDate.of(1993, 1, 13));
 
-        guest.setNameAndSurname("Adéla Malíková");
-        guest.setDatumNarozeni("(1993-03-13)");
+        Guest guest1 = new Guest("Jan Dvořáček", LocalDate.of(1995, 05, 5));
 
-        guest1.setNameAndSurname("Jan Dvořáček");
-        guest1.setDatumNarozeni("(1995-05-05)");
+        Room room = new Room(1, "jednolůžkový pokoj,", "s balkónem,", "s výhledem na moře,", 1000);
+        Room room1 = new Room(3, "trojlůžkový pokoj,", "bez balkónu,", "s výhledem na moře,", 2400);
 
-        Room room = new Room();
-        Room room1 = new Room();
+        Booking booking = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7,26));
+        Booking booking1 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14));
 
-        room.setNoOfRoom("Pokoj číslo 1.,");
-        room.setNoOfBeds("jednolůžkový pokoj,");
-        room.setBalcony("s balkónem,");
-        room.setSeaViews("s výhledem na moře,");
-        room.setPriceForNight("1000kč/noc.");
 
-        room1.setNoOfRoom("Pokoj číslo 3.");
-        room1.setNoOfBeds("třílůžkový pokoj");
-        room1.setBalcony("bez balkónu");
-        room1.setSeaViews("s výhledem na moře");
-        room1.setPriceForNight("2400kč/noc");
+        ListOfBookings listOfBookings = new ListOfBookings("Adéla Malíková", 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26));
+        ListOfBookings listOfBookings1 = new ListOfBookings("Adéla Malíková a Jan Dvořáček", 3, LocalDate.of(2021,9, 1), LocalDate.of(2021, 9, 14));
 
-        Bookingtime bookingtime = new Bookingtime();
-        Bookingtime bookingtime1 = new Bookingtime();
-
-        bookingtime.setBooking("19.7.2021 - 26.7.2021");
-        bookingtime1.setBooking("1.9.2021 - 14.9.2021");
-
-        ListOfBookings listOfBookings = new ListOfBookings();
-        ListOfBookings listOfBookings1 = new ListOfBookings();
-
-        listOfBookings.setNameAndSurname("Adéla Malíková");
-        listOfBookings.setNoOfRoom("Pokoj číslo 1.");
-        listOfBookings.setBooking("19.7.2021 - 26.7.2021");
-
-        listOfBookings1.setNameAndSurname("Adéla Malíková a Jan Dvořáček");
-        listOfBookings1.setNoOfRoom("Pokoj číslo 3.");
-        listOfBookings1.setBooking("1.9.2021 - 14.9.2021");
+        System.out.println(guest.getNameAndSurname() + " " + guest.getBirthDate());
+        System.out.println("Pokoj číslo:" + room.getNoOfRoom() + ","  + " " + room.getNoOfBeds() + " " + room.getBalcony() + " " + room.getSeaViews() + " " + room.getPriceForNight() + "kč/noc");
+        System.out.println(booking.getFrom() + " - " + booking.getTo());
+        System.out.println();
+        System.out.println(guest.getNameAndSurname() + " a " + guest1.getNameAndSurname());
+        System.out.println("Pokoj číslo:" + room1.getNoOfRoom() + "," + " " + room1.getNoOfBeds() + " " + room1.getBalcony() + " " + room1.getSeaViews() + " " + room1.getPriceForNight() + "kč/noc");
+        System.out.println(booking1.getFrom() + " - " + booking1.getTo() );
+        System.out.println();
 
         List<ListOfBookings> bookingsList = new ArrayList<>();
         bookingsList.add(listOfBookings);
         bookingsList.add(listOfBookings1);
 
-
-        System.out.println(guest.getNameAndSurname() + " " + guest.getDatumNarozeni());
-        System.out.println(room.getNoOfRoom() + " " + room.getNoOfBeds() + " " + room.getBalcony() + " " + room.getSeaViews() + " " + room.getPriceForNight());
-        System.out.println("Rezervace:" + " " + bookingtime.getBooking());
-        System.out.println();
-        System.out.println(guest.getNameAndSurname() + " " + guest.getDatumNarozeni() + " " + guest1.getNameAndSurname() + " " + guest1.getDatumNarozeni());
-        System.out.println(room1.getNoOfRoom() + " " + room1.getNoOfBeds() + " " + room1.getBalcony() + " " + room1.getSeaViews() + " " + room1.getPriceForNight());
-        System.out.println("Rezervace:" + " " + bookingtime1.getBooking());
-        System.out.println();
-
         for (ListOfBookings bookings : bookingsList) {
-            System.out.println(bookings.getNameAndSurname() + " " + bookings.getNoOfRoom() + " " + bookings.getBooking());
+            System.out.println(bookings.getNameAndSurname() + "," + " " + "Pokoj číslo:" + bookings.getNoOfRoom()  + ".," + " " + bookings.getBookingFrom() + " - " + bookings.getBookingTo());
+        }
 
         }
 
 
     }
 
-}
