@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8c0d8ce-6f2e-4bb0-ae4f-8dc2d60dfd24" name="Changes" comment="nahrání&#10;Oprava&#10;Doplnění">
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/ja/du/TypeOfVacation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="e8c0d8ce-6f2e-4bb0-ae4f-8dc2d60dfd24" name="Changes" comment="nahrání&#10;Oprava&#10;Doplnění&#10;Doplnění o typ pobytu." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,13 +80,22 @@
       <option name="project" value="LOCAL" />
       <updated>1707054247569</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="nahrání&#10;Oprava&#10;Doplnění&#10;Doplnění o typ pobytu.">
+      <option name="closed" value="true" />
+      <created>1707058409331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707058409331</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nahrání" />
     <MESSAGE value="nahrání&#10;Oprava" />
     <MESSAGE value="nahrání&#10;Oprava&#10;Doplnění" />
-    <option name="LAST_COMMIT_MESSAGE" value="nahrání&#10;Oprava&#10;Doplnění" />
+    <MESSAGE value="nahrání&#10;Oprava&#10;Doplnění&#10;Doplnění o typ pobytu." />
+    <option name="LAST_COMMIT_MESSAGE" value="nahrání&#10;Oprava&#10;Doplnění&#10;Doplnění o typ pobytu." />
   </component>
 </project>

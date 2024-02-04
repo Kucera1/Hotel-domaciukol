@@ -4,21 +4,18 @@ import java.math.BigDecimal;
 
 public class Room {
     private int noOfRoom;
-    private String noOfBeds;
+    private String beds;
     private String balcony;
     private String seaViews;
     private int priceForNight;
 
-    public Room(int noOfRoom, String noOfBeds, String balcony, String seaViews, int priceForNight) {
+    public Room(int noOfRoom, String beds, String balcony, String seaViews, int priceForNight) {
         this.noOfRoom = noOfRoom;
-        this.noOfBeds = noOfBeds;
+        this.beds = beds;
         this.balcony = balcony;
         this.seaViews = seaViews;
         this.priceForNight = priceForNight;
     }
-
-
-
 
     public int getNoOfRoom() {
         return noOfRoom;
@@ -29,11 +26,11 @@ public class Room {
     }
 
     public String getNoOfBeds() {
-        return noOfBeds;
+        return beds;
     }
 
     public void setNoOfBeds(String noOfBeds) {
-        this.noOfBeds = noOfBeds;
+        this.beds = noOfBeds;
     }
 
     public String getBalcony() {
